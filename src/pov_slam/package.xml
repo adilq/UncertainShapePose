@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pov_slam</name>
+  <version>1.0.0</version>
+  <description>simple demo for pov slam</description>
+
+  <license>BSD</license>
+  
+  <maintainer email="jingxing.qian@mail.utoronto.ca">Joe Qian</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  
+</package>
