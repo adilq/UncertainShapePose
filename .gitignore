@@ -1,0 +1,4 @@
+data/*
+.objslam/*
+**/__pycache__/*
+output/*
