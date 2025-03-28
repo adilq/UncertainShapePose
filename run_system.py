@@ -1669,7 +1669,7 @@ def run():
 
     # Init open3d window
     vis = o3d.visualization.Visualizer()
-    vis.create_window(width=800, height=600)
+    vis.create_window(width=800, height=800)
 
     ##############################################
     # Load Dataset
