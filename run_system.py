@@ -797,7 +797,7 @@ def init_scene_list(args, dataset):
 
 def init_frame_ids_for_instance(args, LOOP_INS_ID, scene_order, 
                              scene_detail, dataset_subset=None,
-                             sample_method='equal'):
+                             sample_method='equal', cur_frame=None):
     '''
     @option_select_frame: when using dataset_subset_package, choose how to sample frames from selected frames.
     
@@ -843,7 +843,13 @@ def init_frame_ids_for_instance(args, LOOP_INS_ID, scene_order,
                 print(' - Select from', view_groups[view_num])
                 print(' - all_frame_list:', all_frame_list)
                 
-                selected_frames = [all_frame_list[i] for i in view_groups[view_num]]
+                if cur_frame:
+                    selected_frames = []
+                    for i in view_groups[view_num]:
+                        if i <= cur_frame:
+                            selected_frames.append(all_frame_list[i])
+                else:
+                    selected_frames = [all_frame_list[i] for i in view_groups[view_num]]
                 
                 all_frame_list = selected_frames
             else:
